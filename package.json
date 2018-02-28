@@ -1,0 +1,18 @@
+{
+  "name": "jest-theories",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "babel index.js --out-dir dist"
+  },
+  "main": "./dist/index.js",
+  "module": "index.js",
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}

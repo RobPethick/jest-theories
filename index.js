@@ -1,3 +1,5 @@
+import format from 'string-format';
+
 const theoretically = (testName, theories, testFunc) => {
     if(!test){
         throw new Error('Jest test global must be accessible to use jest-theories');
@@ -7,7 +9,7 @@ const theoretically = (testName, theories, testFunc) => {
     }
     
     theories.forEach(theory => {
-        test(testName, testFunc.bind(this, theory));
+        test(format(testName, theory), testFunc.bind(this, theory));
     });
 };
 

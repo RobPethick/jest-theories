@@ -1,6 +1,6 @@
 {
   "name": "jest-theories",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "scripts": {
     "build": "babel index.js --out-dir dist"
   },
@@ -16,13 +16,15 @@
     "babel-preset-env": "^1.6.1"
   },
   "license": "MIT",
-  "repository" :
-  { 
-    "type" : "git",
-    "url" : "https://github.com/RobPethick/jest-theories"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RobPethick/jest-theories"
   },
   "bugs": {
-    "url" : "https://github.com/RobPethick/jest-theories/issues"
+    "url": "https://github.com/RobPethick/jest-theories/issues"
   },
-  "typings": "index.d.ts"
+  "typings": "index.d.ts",
+  "dependencies": {
+    "string-format": "^0.5.0"
+  }
 }

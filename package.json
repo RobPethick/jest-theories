@@ -1,6 +1,6 @@
 {
   "name": "jest-theories",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "scripts": {
     "build": "babel index.js --out-dir dist"
   },

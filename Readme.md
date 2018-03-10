@@ -27,4 +27,6 @@ describe('NumberToLongString', () => {
 The input string uses [string-format](https://www.npmjs.com/package/string-format) for formatting.
 
 
+## Inspiration
 
+Inspiration from [jasmine-theories](https://github.com/hypesystem/jasmine-theories) and XUnit.

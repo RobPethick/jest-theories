@@ -7,3 +7,7 @@ declare namespace jestTheories {
      */
     export function theoretically(description: string, theories: any[], testFunction: (theory: any) => void): void
 }
+
+declare module "jest-theories" {
+  export = jestTheories.theoretically;
+}

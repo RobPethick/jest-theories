@@ -4,5 +4,5 @@
  * @param theories theories passed to the test
  * @param testFunction the test which takes a single theory parameter for each time it is executed
  */
-declare function theoretically(description: string, theories: any[], testFunction: (theory: any) => void): void
-export default theoretically
+declare function theoretically<T>(description: string, theories: T[], testFunction: (theory: T) => void): void;
+export default theoretically;

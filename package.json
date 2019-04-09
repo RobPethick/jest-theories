@@ -1,6 +1,6 @@
 {
   "name": "jest-theories",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "build": "babel index.js --out-dir dist"
   },
@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1"
+    "babel-preset-env": "^1.7.0"
   },
   "license": "MIT",
   "repository": {

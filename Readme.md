@@ -26,6 +26,8 @@ describe('NumberToLongString', () => {
 
 The input string uses [string-format](https://www.npmjs.com/package/string-format) for formatting.
 
+Additionally to the fields available in your theory you can also use `$idx` for the index of the theory and `$no` for the number of the theory.
+
 
 ## Inspiration
 

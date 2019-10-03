@@ -28,6 +28,26 @@ The input string uses [string-format](https://www.npmjs.com/package/string-forma
 
 Additionally to the fields available in your theory you can also use `$idx` for the index of the theory and `$no` for the number of the theory.
 
+If you want to do more complex test name creation you can supply a function which takes the parameters of the theory and the index
+
+```
+import theoretically from 'jest-theories';
+
+describe('Bigger than 1000', () => {
+    const theories = [
+        {input: 100, expected: false},
+        {input: 1000, expected: false},
+        {input: 10000, expected: true},
+        {input: 100000, expected: true},
+    ]
+
+    theoretically(({input, expected}) => `the number ${input} is ${expected ? '' : 'not'} bigger than 1000`, theories, theory => {
+        const output = IsBiggerThan1000(theory.input);
+        expect(output).toBe(theory.expected);
+    })
+});
+```
+
 
 ## Inspiration
 

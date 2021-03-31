@@ -10,11 +10,12 @@ const theoretically = (testNameCreator, theories, testFunc) => {
 
     const isFunctionTestNameCreator = typeof testNameCreator === 'function';
 
-    if(!isFunctionTestNameCreator && typeof testNameCreator !== 'string') {
+    if (!isFunctionTestNameCreator && typeof testNameCreator !== 'string') {
         throw new Error('Test name creator must be a string or a function')
     }
 
-    theories.forEach((theory, idx) => {
+    for (let idx = 0; idx < theories.length; idx++) {
+        const theory = theories[idx]
         const testName = isFunctionTestNameCreator
             ? testNameCreator(theory, idx)
             : format(testNameCreator, Object.assign({}, theory, { "$idx": idx, "$no": idx + 1 }));
@@ -23,7 +24,7 @@ const theoretically = (testNameCreator, theories, testFunc) => {
             testName,
             testFunc.bind(this, theory)
         );
-    });
+    }
 };
 
 export default theoretically;

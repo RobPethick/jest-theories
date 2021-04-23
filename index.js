@@ -1,6 +1,7 @@
 import format from 'string-format';
 
-const theoretically = (testNameCreator, theories, testFunc) => {
+const _theoretically = (test) => (testNameCreator, theories, testFunc) => {
+
     if (!test) {
         throw new Error('Jest test global must be accessible to use jest-theories');
     }
@@ -26,5 +27,9 @@ const theoretically = (testNameCreator, theories, testFunc) => {
         );
     }
 };
+
+const theoretically = _theoretically(test);
+const only = test.only;
+theoretically.only = _theoretically(only);
 
 export default theoretically;

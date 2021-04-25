@@ -5,4 +5,8 @@
  * @param testFunction the test which takes a single theory parameter for each time it is executed
  */
 declare function theoretically<T>(description: string | ((theory: T, index: number) => string), theories: T[], testFunction: (theory: T) => Promise<void> | void): void;
+declare namespace theoretically {
+    export function only<T>(description: string | ((theory: T, index: number) => string), theories: T[], testFunction: (theory: T) => Promise<void> | void) : void;
+}
+
 export default theoretically;

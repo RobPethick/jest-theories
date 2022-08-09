@@ -48,6 +48,21 @@ describe('Bigger than 1000', () => {
 });
 ```
 
+## Eslint
+If using `plugin:jest/recommended`, add the following to your eslint config to avoid "jest/no-standalone-expect" errors:
+
+```JavaScript
+module.exports = {
+  // other stuff
+  rules: {
+     "jest/no-standalone-expect": [
+          "error",
+          { additionalTestBlockFunctions: ["theoretically"] },
+     ],
+  }
+}
+```
+
 
 ## Inspiration
 
